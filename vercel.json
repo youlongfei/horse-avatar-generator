@@ -10,11 +10,11 @@
       "use": "@vercel/static"
     },
     {
-      "src": "*.js",
+      "src": "*.css",
       "use": "@vercel/static"
     },
     {
-      "src": "*.css",
+      "src": "*.js",
       "use": "@vercel/static"
     }
   ],
@@ -25,7 +25,16 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/$1"
+      "dest": "/$1",
+      "headers": {
+        "cache-control": "s-maxage=31536000,immutable"
+      }
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
