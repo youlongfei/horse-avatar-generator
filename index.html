@@ -1,118 +1,102 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026马年头像一键生成</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="zh-CN"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;2026马年头像一键生成&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="stylesheet" href="style.css"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;header&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h1&gt;&lt;i class="fas fa-horse-head"&gt;&lt;/i&gt; 2026马年头像生成器&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="subtitle"&gt;上传你的头像，一键生成专属马年风格头像&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;main&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="upload-section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="upload-area" id="uploadArea"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;i class="fas fa-cloud-upload-alt"&gt;&lt;/i&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;点击上传或拖拽图片到此区域&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="upload-hint"&gt;支持 JPG、PNG 格式，建议正方形图片&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="file" id="fileInput" accept="image/*" hidden&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="preview-section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="image-container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="image-box"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;img id="previewImage" src="" alt="预览"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="image-label"&gt;原图&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="arrow"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="image-box"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;img id="generatedImage" src="" alt="生成结果"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="image-label"&gt;生成结果&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="style-selection"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;&lt;i class="fas fa-palette"&gt;&lt;/i&gt; 选择风格&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="style-options"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label class="style-option"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="radio" name="style" value="1" checked&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="option-content"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;i class="fas fa-birthday-cake"&gt;&lt;/i&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span&gt;福字风格&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="option-desc"&gt;传统福字元素，新年祝福&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label class="style-option"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="radio" name="style" value="2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="option-content"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;i class="fas fa-flag"&gt;&lt;/i&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span&gt;新征程风格&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="option-desc"&gt;2026新征程主题&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="action-section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;button id="generateBtn" class="generate-btn" disabled&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;i class="fas fa-magic"&gt;&lt;/i&gt; 生成头像</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;button id="downloadBtn" class="download-btn" disabled&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;i class="fas fa-download"&gt;&lt;/i&gt; 下载头像</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="instructions"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;&lt;i class="fas fa-info-circle"&gt;&lt;/i&gt; 使用说明&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;ol&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;点击上方区域上传你的头像图片&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;选择你喜欢的风格（福字或新征程）&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;点击"生成头像"按钮等待处理&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;生成完成后点击"下载头像"保存&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/ol&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="tips"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;&lt;strong&gt;提示：&lt;/strong&gt;生成的头像将严格按照要求，不会包含任何额外文字元素。&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/main&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Powered by 扣子工作流 | 2026马年特别版&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="loading-overlay" id="loadingOverlay"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="loading-content"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="spinner"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;正在生成中，请稍候...&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="script.js"&gt;&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-horse-head"></i> 2026马年头像生成器</h1>
+            <p class="subtitle">上传你的头像，一键生成专属马年风格头像</p>
+        </header>
+
+        <main>
+            <div class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>点击上传或拖拽图片到此区域</p>
+                    <p class="upload-hint">支持 JPG、PNG 格式，建议正方形图片</p>
+                    <input type="file" id="fileInput" accept="image/*" hidden>
+                </div>
+                
+                <div class="preview-section">
+                    <div class="image-container">
+                        <div class="image-box">
+                            <img id="previewImage" src="" alt="预览">
+                            <div class="image-label">原图</div>
+                        </div>
+                        <div class="arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="image-box">
+                            <img id="generatedImage" src="" alt="生成结果">
+                            <div class="image-label">生成结果</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="style-selection">
+                <h3><i class="fas fa-palette"></i> 选择风格</h3>
+                <div class="style-options">
+                    <label class="style-option">
+                        <input type="radio" name="style" value="1" checked>
+                        <div class="option-content">
+                            <i class="fas fa-birthday-cake"></i>
+                            <span>福字风格</span>
+                            <p class="option-desc">传统福字元素，新年祝福</p>
+                        </div>
+                    </label>
+                    <label class="style-option">
+                        <input type="radio" name="style" value="2">
+                        <div class="option-content">
+                            <i class="fas fa-flag"></i>
+                            <span>新征程风格</span>
+                            <p class="option-desc">2026新征程主题</p>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="action-section">
+                <button id="generateBtn" class="generate-btn" disabled>
+                    <i class="fas fa-magic"></i> 生成头像
+                </button>
+                <button id="downloadBtn" class="download-btn" disabled>
+                    <i class="fas fa-download"></i> 下载头像
+                </button>
+            </div>
+
+            <div class="instructions">
+                <h3><i class="fas fa-info-circle"></i> 使用说明</h3>
+                <ol>
+                    <li>点击上方区域上传你的头像图片</li>
+                    <li>选择你喜欢的风格（福字或新征程）</li>
+                    <li>点击"生成头像"按钮等待处理</li>
+                    <li>生成完成后点击"下载头像"保存</li>
+                </ol>
+                <div class="tips">
+                    <p><strong>提示：</strong>生成的头像将严格按照要求，不会包含任何额外文字元素。</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by 扣子工作流 | 2026马年特别版</p>
+        </footer>
+    </div>
+
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <p>正在生成中，请稍候...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
